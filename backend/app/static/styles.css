@@ -1,0 +1,55 @@
+body {
+  font-family: Inter, Arial, sans-serif;
+  margin: 0;
+  background: #fafafa;
+  color: #222;
+}
+header {
+  background: #111827;
+  color: #fff;
+  padding: 16px 24px;
+}
+main {
+  padding: 20px;
+}
+.controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.workspace {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+aside, #previewWrap {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+}
+#blocks {
+  max-height: 65vh;
+  overflow: auto;
+}
+.block {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+.block label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+.block input {
+  width: 100%;
+  margin-bottom: 6px;
+}
+#preview {
+  width: 100%;
+  height: 70vh;
+  border: 0;
+}
