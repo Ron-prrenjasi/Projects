@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Editor MVP</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Menu Editor MVP</h1>
+      <p>Upload PDF/JPG/PNG, edit detected text, and save your project.</p>
+    </header>
+
+    <main>
+      <section class="controls">
+        <input id="fileInput" type="file" accept="application/pdf,image/jpeg,image/png" />
+        <button id="uploadBtn">Upload</button>
+        <button id="saveBtn" disabled>Save</button>
+        <div id="status"></div>
+      </section>
+
+      <section class="workspace">
+        <aside>
+          <h2>Text Blocks</h2>
+          <div id="blocks"></div>
+        </aside>
+
+        <div id="previewWrap">
+          <h2>Source Preview</h2>
+          <iframe id="preview" title="pdf-preview"></iframe>
+        </div>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
