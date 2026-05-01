@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Editor Pro MVP</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Menu Editor Pro MVP</h1>
+      <p>Upload, OCR/extract, visually edit text blocks, and save reusable projects.</p>
+    </header>
+
+    <main>
+      <section class="controls">
+        <input id="fileInput" type="file" accept="application/pdf,image/jpeg,image/png" />
+        <button id="uploadBtn">Upload</button>
+        <button id="saveBtn" disabled>Save</button>
+        <button id="addBlockBtn" disabled>Add Text Block</button>
+        <button id="resetBtn" disabled>Reset Unsaved Changes</button>
+      </section>
+
+      <section class="controls secondary">
+        <input id="projectIdInput" type="text" placeholder="Project ID" />
+        <button id="loadProjectBtn">Load Project</button>
+        <button id="refreshProjectsBtn">Refresh Projects</button>
+        <input id="searchInput" type="text" placeholder="Search text blocks" />
+        <label><input id="showOnlyEdited" type="checkbox" /> Only changed</label>
+        <label><input id="darkModeToggle" type="checkbox" /> Dark mode</label>
+        <div id="status"></div>
+      </section>
+
+      <section class="workspace">
+        <aside>
+          <div class="panel-title">
+            <h2>Text Blocks</h2>
+            <small id="blockCount">0 blocks</small>
+          </div>
+          <div id="blocks"></div>
+        </aside>
+
+        <div id="previewWrap">
+          <h2>Source Preview</h2>
+          <iframe id="preview" title="source-preview"></iframe>
+        </div>
+
+        <aside>
+          <div class="panel-title">
+            <h2>Recent Projects</h2>
+            <small>Load quickly</small>
+          </div>
+          <div id="projectList"></div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
